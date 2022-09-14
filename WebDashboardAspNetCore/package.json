@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "name": "asp.net",
+  "private": true,
+  "devDependencies": {
+    "devextreme": "21.2.5",
+    "@devexpress/analytics-core": "21.2.5",
+    "devexpress-dashboard": "21.2.5",
+    "jquery-ui-dist": "^1.13.0"
+  }
+}

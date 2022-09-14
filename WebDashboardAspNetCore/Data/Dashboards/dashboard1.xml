@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-GB">
+	<Title Text="Dashboard" />
+	<DataSources>
+		<ObjectDataSource Name="Flights level" ComponentName="dashboardObjectDataSource1">
+			<DataSource Type="System.Data.DataTable, System.Data, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+		</ObjectDataSource>
+	</DataSources> 
+	<Items>
+		<Chart ComponentName="chartDashboardItem1" Name="Chart 1" DataSource="dashboardObjectDataSource1">
+			<DataItems>
+				<Dimension DataMember="Origin" DefaultId="DataItem0">
+					<NumericFormat FormatType="General" />
+				</Dimension>
+				<Measure DataMember="Pax Emb SUM" DefaultId="DataItem1">
+					<NumericFormat FormatType="Number" />
+				</Measure>
+			</DataItems>
+			<Arguments>
+				<Argument DefaultId="DataItem0" />
+			</Arguments>
+			<Panes>
+				<Pane Name="Pane 1">
+					<AxisY>
+						<NumericFormat FormatType="Number" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
+					</AxisY>
+					<SecondaryAxisY>
+						<NumericFormat FormatType="Number" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
+					</SecondaryAxisY>
+					<Series>
+						<Simple>
+							<Value DefaultId="DataItem1" />
+						</Simple>
+					</Series>
+				</Pane>
+			</Panes>
+		</Chart>
+	</Items>
+	<LayoutTree>
+		<LayoutGroup>
+			<LayoutItem DashboardItem="chartDashboardItem1" />
+		</LayoutGroup>
+	</LayoutTree>
+</Dashboard>
